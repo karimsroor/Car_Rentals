@@ -5,5 +5,3 @@
 #ASP.NET MVC/ Angular JS   web client
 #WPF desktop client
 ----------------------------------------------------
-
-adding un needed text  or data
