@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8596EB1-6019-4ACF-8336-833F01E5DB78}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarRental.ServiceHost.Console</RootNamespace>
+    <AssemblyName>CarRental.ServiceHost.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CarRentals\CarRental.Bussiness.Entities\CarRental.Bussiness.Entities.csproj">
+      <Project>{fc2ad580-8ebb-4705-9a58-a6e8c2c0ac74}</Project>
+      <Name>CarRental.Bussiness.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CarRentals\Core.Common.Contracts\Core.Common.Contracts.csproj">
+      <Project>{a7088f53-6e25-465e-8e71-b56440fedad0}</Project>
+      <Name>Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CarRentals\Core.Common\Core.Common.csproj">
+      <Project>{e7b26d50-0a49-4d2e-b33e-19103df17bac}</Project>
+      <Name>Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Bussiness.Bootstrapper\CarRental.Bussiness.Bootstrapper.csproj">
+      <Project>{60f8d15a-a526-4e29-ab2d-924673784ba5}</Project>
+      <Name>CarRental.Bussiness.Bootstrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Bussiness.Common\CarRental.Bussiness.Common.csproj">
+      <Project>{427de09b-76a1-49fe-a624-1d78eceab18a}</Project>
+      <Name>CarRental.Bussiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Bussiness.Contracts\CarRental.Bussiness.Contracts.csproj">
+      <Project>{222558f4-f7ae-4ad1-b5f5-af909c143a7d}</Project>
+      <Name>CarRental.Bussiness.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Bussiness.Engines\CarRental.Bussiness.Engines.csproj">
+      <Project>{20812595-7235-44cd-8a82-3711444e8e9c}</Project>
+      <Name>CarRental.Bussiness.Engines</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Bussiness.Managers\CarRental.Bussiness.Managers.csproj">
+      <Project>{e853655a-df17-4d24-9822-9fc8b6d66d90}</Project>
+      <Name>CarRental.Bussiness.Managers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Common.Contracts\CarRental.Common.Contracts.csproj">
+      <Project>{04ab0e2f-e1d6-41fc-a169-ed32943c83d4}</Project>
+      <Name>CarRental.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Common\CarRental.Common.csproj">
+      <Project>{bd153304-2f7e-49cb-96a5-49c5616e7eb2}</Project>
+      <Name>CarRental.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Data.Tests\CarRental.Data.Tests.csproj">
+      <Project>{911ba92a-00fc-4b97-bccb-586580dd1f5f}</Project>
+      <Name>CarRental.Data.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.DataContracts\CarRental.DataContracts.csproj">
+      <Project>{a94c50e8-54b7-466d-90aa-0c88900ae315}</Project>
+      <Name>CarRental.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Data\CarRental.Data.csproj">
+      <Project>{e8e3ceda-6fb6-421b-8163-37e344a6afac}</Project>
+      <Name>CarRental.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Common.ServiceModel\Core.Common.ServiceModel.csproj">
+      <Project>{c1de978f-f526-4ef8-a987-b0830912da02}</Project>
+      <Name>Core.Common.ServiceModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
